@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calcular promedio en JavaScript 
+    </title>
+</head>
+
+<body>
+</body>
+<script>
+   var nom = prompt("Ingrese nombre del estudiante");
+var vr1, vr2, vr3;
+
+
+function validarNota(nota) {
+    return !isNaN(nota) && nota >= 0 && nota <= 10;
+}
+
+vr1 = parseFloat(prompt("Ingrese nota 1"));
+if (!validarNota(vr1)) {
+    alert("Por favor, ingrese una nota 1 válida entre 0 y 10.");
+    vr1 = parseFloat(prompt("Ingrese nota 1 nuevamente"));
+}
+
+vr2 = parseFloat(prompt("Ingrese nota 2"));
+if (!validarNota(vr2)) {
+    alert("Por favor, ingrese una nota 2 válida entre 0 y 10.");
+    vr2 = parseFloat(prompt("Ingrese nota 2 nuevamente"));
+}
+
+vr3 = parseFloat(prompt("Ingrese nota 3"));
+if (!validarNota(vr3)) {
+    alert("Por favor, ingrese una nota 3 válida entre 0 y 10.");
+    vr3 = parseFloat(prompt("Ingrese nota 3 nuevamente"));
+}
+
+
+var promedio = (vr1 + vr2 + vr3) / 3;
+if (promedio >= 7) {
+    alert("FELICIDADES!! " + nom+  "TU PROMEDIO "+ promedio.toFixed(2) + "  HAS APROBADO");
+} else {
+    alert(  "GRACIAS POR TU ESFUERZO" +nom+ "NOS VEMOS PRONTO EN CLASE TU PROMEDIO ES  " + promedio.toFixed(2) + " NO APROBADO");
+}
+
+
+
+
+</script>
+
+</html>
